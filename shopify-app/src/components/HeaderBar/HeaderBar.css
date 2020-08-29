@@ -1,0 +1,11 @@
+.HeaderBar {
+    background-color: #3483eb;
+    height: 100px;
+    padding: 30px;
+}
+
+.HeaderBar-header {
+    font-size: x-large;
+    font-family: 'Nunito Regular';
+    color: white;
+}

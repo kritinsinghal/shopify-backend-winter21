@@ -1,0 +1,40 @@
+.Inventory {
+    padding: 4rem;
+    text-align: center;
+}
+
+.Inventory-header {
+    font-size: x-large;
+    font-family: 'Nunito Light';
+    font-weight: bolder;
+    align-content: center;
+    color: #3483eb;
+}
+
+.Inventory-price p {
+    text-align: right;
+}
+
+.Inventory-sales {
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.Inventory-manager-content {
+    padding: 1rem;
+}
+
+.Inventory-manager-content p {
+    font-family: 'Nunito Regular';
+    font-size: medium;
+    float: right;
+    margin-right: 30px;
+}
+
+.Inventory-input {
+    margin-bottom: 30px;
+}
+
+.Inventory-image {
+    width: 80%;
+}

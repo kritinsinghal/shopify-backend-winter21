@@ -1,0 +1,25 @@
+.Upload {
+    padding: 4rem;
+    text-align: center;
+}
+
+.Upload-header {
+    font-size: x-large;
+    font-family: 'Nunito Light';
+    font-weight: bolder;
+    align-content: center;
+    color: #3483eb;
+}
+
+.Upload-manager-content {
+    width: 50%;
+}
+
+.Upload-manager-content div {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.invalid {
+    margin-top: 1rem;
+}
