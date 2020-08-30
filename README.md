@@ -18,6 +18,7 @@ The entire application can be accessed here: https://shopify-winter-21.herokuapp
         - [POST](#create-new-inventory)
         - [PUT](#edit-existing-inventory)
         - [DELETE](#delete-an-inventory)
+        - [GET-individual](#get-individual-inventory)
     - [Sales](#sales)
         - [GET](#get-sales)
         - [POST](#update-sales)
@@ -43,6 +44,7 @@ I have used Flask for creating the store and managing the RESTful API Services. 
 # API
 -----
 The APIs are hosted at https://shopify-backend-12121.herokuapp.com
+If using the local environment, please use the following URL: http://127.0.0.1:5000
 
 ## Inventory
 
@@ -130,6 +132,34 @@ Example Response:
     "status": "success"
 }
 ```
+
+## Sales
+
+### GET Sales
+API to get data for sales of each inventory
+
+```GET /api/sales/:id```
+
+Example Response:
+```
+{
+    "code": 200,
+    "data": {
+        "inventory_id": "68db347a-d455-4ada-b6e7-6ec007dabcd3",
+        "price": "22",
+        "sold": "16",
+        "value": "320"
+    },
+    "status": "success"
+}
+```
+
+### Update Sales
+API to update the value of sales after each inventory bought
+
+```POST /api/sales/:id```
+
+
 
 # Client
 -----
