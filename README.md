@@ -5,6 +5,8 @@ Inventory & Sales Manager
 
 This is a three-fold project involving client-side features, RESTful APIs and Google Cloud integrations. The client-side has been developed in React.js and has been deployment manually into the Heroku hosting platform. The RESTful APIs are developed in Python Flask and containerized in Docker. The Inventory Store (APIs) are deployed to the Heroku platform through an automatic pipeline channel that runs with the help of Kubernetes engine. 
 
+![Architecture](assets/Shopify.png)
+
 The entire application can be accessed here: https://shopify-winter-21.herokuapp.com/
 
 # Table of Contents
