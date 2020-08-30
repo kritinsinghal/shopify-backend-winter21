@@ -7,7 +7,7 @@ This is a three-fold project involving client-side features, RESTful APIs and Go
 
 ![Architecture](assets/Shopify.png)
 
-The entire application can be accessed here: https://shopify-winter-21.herokuapp.com/
+The client application can be accessed here: https://shopify-winter-21.herokuapp.com/
 
 # Table of Contents
 - [Deployment](#deployment)
