@@ -12,7 +12,7 @@ function Home() {
     const [items, setItems] = useState([]);
 
     useEffect(() => { 
-        const apiUrl = 'http://127.0.0.1:5000/api/inventory';
+        const apiUrl = 'https://shopify-backend-12121.herokuapp.com/api/inventory';
         fetch(apiUrl)
           .then(res => res.json())
           .then(

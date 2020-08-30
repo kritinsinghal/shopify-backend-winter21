@@ -1,13 +1,7 @@
 import axios from 'axios';
-const {Storage} = require('@google-cloud/storage');
-const storage = new Storage();
 
-const bucket = 'shopify-challenge-287908.appspot.com'
+const url = 'https://shopify-backend-12121.herokuapp.com'
 
-export async function uploadFile(filename) {
-	await storage.bucket(bucket).upload(filename);
-	console.log(`${filename} uploaded to ${bucket}.`);
-}
   
 export function newInv(name, image, price, qty, discount) { 
 	let req = {
@@ -17,17 +11,17 @@ export function newInv(name, image, price, qty, discount) {
 		qty: qty,
 		discount: discount
 	};
-	const apiUrl = 'http://127.0.0.1:5000/api/inventory';
+	const apiUrl = url + '/api/inventory';
 	return axios.post(apiUrl, req);
 }
 
 export function buyInventory(id) { 
-	const apiUrl = 'http://127.0.0.1:5000/api/buy/' + id;
+	const apiUrl = url + '/api/buy/' + id;
 	return axios.post(apiUrl);
 }
 
 export function deleteInv(id) { 
-	const apiUrl = 'http://127.0.0.1:5000/api/delete/' + id;
+	const apiUrl = url + '/api/delete/' + id;
 	return axios.post(apiUrl);
 }
 
@@ -38,7 +32,7 @@ export function updateInv(id, price, qty, discount) {
 		discount: discount
 	};
 
-	const apiUrl = 'http://127.0.0.1:5000/api/inventory/' + id;
+	const apiUrl = url + '/api/inventory/' + id;
 	return axios.put(apiUrl, req);
 }
 
