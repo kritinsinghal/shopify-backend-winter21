@@ -57,7 +57,7 @@ def api_inventory_update(*args, **kwargs):
     req_args = request.args
   return Inventory().update(inventory_id, req_args)
 
-@app.route("/api/inventory/<inventory_id>", methods=['DELETE'])
+@app.route("/api/inventory/delete/<inventory_id>", methods=['POST'])
 @verify_api()
 def api_inventory_delete(*args, **kwargs):
   inventory_id = kwargs.get('inventory_id')

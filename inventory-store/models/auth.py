@@ -34,7 +34,7 @@ def verify_api():
             elif request.form.get("inventory_id"):
                 inventory_id = request.args.get('inventory_id')
                 response["inventory_id"] = inventory_id
-                
+
             else:
                 req_json = request.get_json()
                 if req_json is not None:
@@ -43,7 +43,7 @@ def verify_api():
             
             if api_key is not None:
                 check = Auth().check(api_key)
-            
+        
             if api_key is None or check == False:
                 return response_helper.failure(response, "Invalid API Key")
             
@@ -64,7 +64,6 @@ class Auth():
         resp = {}
         resp["key"] = apiKey
         resp["timestamp"] = datetime.datetime.now()
-        print(resp)
         collection.document(apiKey).set(resp)
         return response_helper.success(resp)
     

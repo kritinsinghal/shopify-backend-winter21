@@ -28,8 +28,8 @@ export function deleteInv(id) {
 	let req = {
 		api_key: api_Key
 	}
-	const apiUrl = url + '/api/inventory/' + id;
-	return axios.delete(apiUrl, req);
+	const apiUrl = url + '/api/inventory/delete/' + id;
+	return axios.post(apiUrl, req);
 }
 
 export function updateInv(id, price, qty, discount) { 

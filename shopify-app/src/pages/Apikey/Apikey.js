@@ -6,7 +6,7 @@ function Apikey() {
   const [key, setKey] = useState("");
 
   const newApi = () => {
-    const apiUrl = 'http://127.0.0.1:5000/api/key';
+    const apiUrl = 'https://shopify-backend-12121.herokuapp.com/api/key';
     fetch(apiUrl)
       .then(res => res.json())
       .then(
