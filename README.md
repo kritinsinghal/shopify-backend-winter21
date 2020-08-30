@@ -27,6 +27,7 @@ The entire application can be accessed here: https://shopify-winter-21.herokuapp
     - [Delete-Inventory](#delete-inventory)
     - [Buy-Inventory](#buy-inventory)
     - [Edit-Inventory](#edit-inventory)
+- [Future](#future-work)
 
 
 # Deployment
@@ -180,3 +181,7 @@ The Client consists of a simple React.js application that manages the buying/sel
 ## Edit Inventory
 
 ![Edit Inventory](assets/update.png)
+
+# Future Work
+-----
+There are multiple possible features and decorators that we could implement to make the application robust. The first and foremost iteration would be to implement an authorization layer above the APIs to assign and check authorization for each API call. This would be backed by the entire login/user-profile section. I was only able to get upto this point for this project and I'll keep updating with more layers.
