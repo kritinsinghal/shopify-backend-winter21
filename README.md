@@ -13,6 +13,10 @@ The entire application can be accessed here: https://shopify-winter-21.herokuapp
 - [Deployment](#deployment)
 - [Schema](#schema)
 - [Client](#client)
+    - [Add-Inventory](#add-inventory)
+    - [Delete-Inventory](#delete-inventory)
+    - [Buy-Inventory](#buy-inventory)
+    - [Edit-Inventory](#edit-inventory)
 - [API](#api)
     - [Inventory](#inventory)
         - [GET](#get-all-inventory)
@@ -26,10 +30,23 @@ The entire application can be accessed here: https://shopify-winter-21.herokuapp
 
 # Deployment
 -----
-I have deployed one instance of the flask pod with no LoadBalancers as I don't expect too much traffic. The Kubernetes engine has been managed by the GKE clusters. 
+I have deployed one instance of the flask pod with no LoadBalancers as I don't expect too much traffic. The Kubernetes engine has been managed by Google Cloud Engine Kubectl. 
 
 # Schema 
 -----
 I have used Flask for creating the store and managing the RESTful API Services. The store contains two entities - Inventory and Sales. Inventory manages the general profile for the inventory and Sales manage the buying/selling points of the inventory. The entity diagram for the schema has been detailed below:
 
+
 ![Schema](assets/Shopifyschema.png)
+
+# Client
+-----
+The Client consists of a simple React.js application that manages the buying/selling peices of the inventory along with the sales and stock management. The client uses React Hooks to navigate between different Components. I have also integrated the Ant-Design library to make the page look pretty and neat. 
+
+## Add Inventory
+
+![Add Inventory](assets/add.png)
+
+## Buy Inventory
+
+![Buy Inventory](assets/buy.png)
