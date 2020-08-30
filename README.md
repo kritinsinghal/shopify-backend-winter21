@@ -1,4 +1,4 @@
-# Shopify-Dev-Challenge-Winter-2021
+# Shopify Backend Challenge Winter 2021
 
 Inventory & Sales Manager
 ==============================
