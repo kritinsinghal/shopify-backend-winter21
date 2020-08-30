@@ -53,15 +53,16 @@ If using the local environment, please use the following URL: http://127.0.0.1:5
 Before using the APIs, please request your free API Key here: https://shopify-winter-21.herokuapp.com/apikey \
 You can also use the default API Key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de \
 
-### Request New API Key
-API to request a new API key
-
-```GET /api/key```
-
 
 ## Authentication
 
 All the APIs have a layer of authentication implemented using a decorator. The decorator ensures that API-KEY provided by the APIs matches with system before proceeding forward with the execution. In case, the API key does not match with one on the database, it returns a failure response.
+
+
+### Request New API Key
+API to request a new API key
+
+```GET /api/key```
 
 ## Inventory
 

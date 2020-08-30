@@ -27,6 +27,20 @@ def verify_api():
                 if req_json is not None:
                     api_key = req_json.get('api_key')
             
+            if request.args.get('inventory_id'):
+                inventory_id = request.args.get('inventory_id')
+                response["inventory_id"] = inventory_id
+                
+            elif request.form.get("inventory_id"):
+                inventory_id = request.args.get('inventory_id')
+                response["inventory_id"] = inventory_id
+                
+            else:
+                req_json = request.get_json()
+                if req_json is not None:
+                    inventory_id = req_json.get('inventory_id')
+                    response["inventory_id"] = inventory_id
+            
             if api_key is not None:
                 check = Auth().check(api_key)
             

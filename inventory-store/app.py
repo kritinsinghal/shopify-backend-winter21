@@ -31,6 +31,7 @@ def api_inventory_get(*args, **kwargs):
 @app.route("/api/sales/<inventory_id>", methods=['POST'])
 @verify_api()
 def api_inventory_buy(*args, **kwargs):
+  print(kwargs)
   inventory_id = kwargs.get('inventory_id')
   Inventory().buy(inventory_id)
   Sales().buy(inventory_id)
