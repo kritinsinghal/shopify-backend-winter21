@@ -80,8 +80,8 @@ Example Response:
 ### Create New Inventory
 API to create a new inventory
 
-```POST /api/inventory
-
+```POST /api/inventory```
+```
 params:
 {
     name: (Name of the Inventory) Required,
@@ -95,8 +95,8 @@ params:
 ### Edit Existing Inventory
 API to edit an existing inventory
 
-```PUT /api/inventory/:id
-
+```PUT /api/inventory/:id```
+```
 params:
 {
     qty: (Quantity in Stock) Required,
