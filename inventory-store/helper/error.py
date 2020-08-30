@@ -1,0 +1,1 @@
+nonAlphaN = "Search Query is not Alpha-Numeric"

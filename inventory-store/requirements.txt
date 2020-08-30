@@ -1,0 +1,6 @@
+flask
+flask_cors
+google-cloud-firestore
+datetime
+uuid
+gunicorn
