@@ -45,8 +45,16 @@ The Client consists of a simple React.js application that manages the buying/sel
 
 ## Add Inventory
 
-![Add Inventory](assets/add.png)
+![Add Inventory](assets/buy.png)
 
 ## Buy Inventory
 
-![Buy Inventory](assets/buy.png)
+![Buy Inventory](assets/add.png)
+
+## Delete Inventory
+
+![Delete Inventory](assets/delete.png)
+
+## Edit Inventory
+
+![Edit Inventory](assets/update.png)
