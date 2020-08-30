@@ -12,11 +12,6 @@ The entire application can be accessed here: https://shopify-winter-21.herokuapp
 # Table of Contents
 - [Deployment](#deployment)
 - [Schema](#schema)
-- [Client](#client)
-    - [Add-Inventory](#add-inventory)
-    - [Delete-Inventory](#delete-inventory)
-    - [Buy-Inventory](#buy-inventory)
-    - [Edit-Inventory](#edit-inventory)
 - [API](#api)
     - [Inventory](#inventory)
         - [GET](#get-all-inventory)
@@ -26,6 +21,11 @@ The entire application can be accessed here: https://shopify-winter-21.herokuapp
     - [Sales](#sales)
         - [GET](#get-sales)
         - [POST](#update-sales)
+- [Client](#client)
+    - [Add-Inventory](#add-inventory)
+    - [Delete-Inventory](#delete-inventory)
+    - [Buy-Inventory](#buy-inventory)
+    - [Edit-Inventory](#edit-inventory)
 
 
 # Deployment
@@ -38,6 +38,45 @@ I have used Flask for creating the store and managing the RESTful API Services. 
 
 
 ![Schema](assets/Shopifyschema.png)
+
+
+# API
+-----
+The APIs are hosted at https://shopify-backend-12121.herokuapp.com
+
+## Inventory
+
+### GET all Inventory
+API to get all the inventories in the store
+
+```GET /api/inventory```
+
+Example Response:
+```
+{
+    "code": 200,
+    "data": [
+        {
+            "discount": "10",
+            "image": "https://ii1.pepperfry.com/media/catalog/product/r/a/800x880/rajasthan-decor-multicolour-cotton-king-size-bedsheet---set-of-3-rajasthan-decor-multicolour-cotton--a2m4co.jpg",
+            "inventory_id": "3b8dddaa-3ecb-461f-a27b-44a176bad5a7",
+            "name": "Bedsheet",
+            "price": "40",
+            "qty": "29"
+        },
+        {
+            "discount": "20",
+            "image": "https://www.mydesignation.com/wp-content/uploads/2019/03/shammi-tshirt-image-unisex-mydesignation-.jpg",
+            "inventory_id": "68db347a-d455-4ada-b6e7-6ec007dabcd3",
+            "name": "T-shirt",
+            "price": "22",
+            "qty": "40"
+        }
+    ],
+    "status": "success"
+}
+```
+
 
 # Client
 -----
