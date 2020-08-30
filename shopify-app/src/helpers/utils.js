@@ -16,13 +16,13 @@ export function newInv(name, image, price, qty, discount) {
 }
 
 export function buyInventory(id) { 
-	const apiUrl = url + '/api/buy/' + id;
+	const apiUrl = url + '/api/sales/' + id;
 	return axios.post(apiUrl);
 }
 
 export function deleteInv(id) { 
-	const apiUrl = url + '/api/delete/' + id;
-	return axios.post(apiUrl);
+	const apiUrl = url + '/api/inventory/' + id;
+	return axios.delete(apiUrl);
 }
 
 export function updateInv(id, price, qty, discount) { 

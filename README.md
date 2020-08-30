@@ -77,6 +77,59 @@ Example Response:
 }
 ```
 
+### Create New Inventory
+API to create a new inventory
+
+```POST /api/inventory
+
+params:
+{
+    name: (Name of the Inventory) Required,
+    image: (Image URL) Required,
+    qty: (Quantity in Stock) Required,
+    price: (Price) Required,
+    discount: (Discount) Required,
+}
+```
+
+### Edit Existing Inventory
+API to edit an existing inventory
+
+```PUT /api/inventory/:id
+
+params:
+{
+    qty: (Quantity in Stock) Required,
+    price: (Price) Required,
+    discount: (Discount) Required,
+}
+```
+
+### DELETE an Inventory
+API to delete an inventory
+
+```DELETE /api/inventory/:id```
+
+### GET individual Inventory
+API to get data for individual inventory
+
+```GET /api/inventory/:id```
+
+Example Response: 
+```
+{
+    "code": 200,
+    "data": {
+        "discount": "20",
+        "image": "https://www.mydesignation.com/wp-content/uploads/2019/03/shammi-tshirt-image-unisex-mydesignation-.jpg",
+        "inventory_id": "68db347a-d455-4ada-b6e7-6ec007dabcd3",
+        "name": "T-shirt",
+        "price": "22",
+        "qty": "40"
+    },
+    "status": "success"
+}
+```
 
 # Client
 -----
