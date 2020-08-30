@@ -16,6 +16,7 @@ The client application can be accessed here: https://shopify-winter-21.herokuapp
 - [Deployment](#deployment)
 - [Schema](#schema)
 - [API](#api)
+    - [Authentication](#authentication)
     - [Inventory](#inventory)
         - [GET](#get-all-inventory)
         - [POST](#create-new-inventory)
@@ -48,7 +49,19 @@ I have used Flask for creating the store and managing the RESTful API Services. 
 # API
 -----
 The APIs are hosted at https://shopify-backend-12121.herokuapp.com \
-If using the local environment, please use the following URL: http://127.0.0.1:5000
+If using the local environment, please use the following URL: http://127.0.0.1:5000 \
+Before using the APIs, please request your free API Key here: https://shopify-winter-21.herokuapp.com/apikey \
+You can also use the default API Key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de \
+
+### Request New API Key
+API to request a new API key
+
+```GET /api/key```
+
+
+## Authentication
+
+All the APIs have a layer of authentication implemented using a decorator. The decorator ensures that API-KEY provided by the APIs matches with system before proceeding forward with the execution. In case, the API key does not match with one on the database, it returns a failure response.
 
 ## Inventory
 
@@ -57,6 +70,12 @@ API to get all the inventories in the store
 
 ```GET /api/inventory```
 
+```
+params:
+{
+    api_key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de (Required),
+}
+```
 Example Response:
 ```
 {
@@ -95,6 +114,7 @@ params:
     qty: (Quantity in Stock) Required,
     price: (Price) Required,
     discount: (Discount) Required,
+    api_key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de (Required),
 }
 ```
 
@@ -108,6 +128,7 @@ params:
     qty: (Quantity in Stock) Required,
     price: (Price) Required,
     discount: (Discount) Required,
+    api_key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de (Required),
 }
 ```
 
@@ -115,11 +136,23 @@ params:
 API to delete an inventory
 
 ```DELETE /api/inventory/:id```
+```
+params:
+{
+    api_key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de (Required),
+}
+```
 
 ### GET individual Inventory
 API to get data for individual inventory
 
 ```GET /api/inventory/:id```
+```
+params:
+{
+    api_key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de (Required),
+}
+```
 
 Example Response: 
 ```
@@ -143,6 +176,12 @@ Example Response:
 API to get data for sales of each inventory
 
 ```GET /api/sales/:id```
+```
+params:
+{
+    api_key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de (Required),
+}
+```
 
 Example Response:
 ```
@@ -162,6 +201,12 @@ Example Response:
 API to update the value of sales after each inventory bought
 
 ```POST /api/sales/:id```
+```
+params:
+{
+    api_key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de (Required),
+}
+```
 
 
 

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HeaderBar from './components/HeaderBar/HeaderBar';
 import Home from './pages/Home/Home';
 import UploadInv from './pages/UploadInv/UploadInv';
-
+import APIKey from './pages/Apikey/Apikey';
 import Inventory from './pages/Inventory/Inventory';
 import './App.css';
 
@@ -18,6 +18,9 @@ function App() {
         </Route>
         <Route path="/upload">
           <UploadInv />
+        </Route>
+        <Route path="/apikey">
+          <APIKey />
         </Route>
         <Route path="/">
           <Home />

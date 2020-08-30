@@ -23,8 +23,9 @@ function Inventory() {
     inventoryId = inventoryId.params.id;
     
     useEffect(() => { 
-        const apiUrl1 = 'https://shopify-backend-12121.herokuapp.com/api/inventory/' + inventoryId;
-        const apiUrl2 = 'https://shopify-backend-12121.herokuapp.com/api/sales/' + inventoryId;
+        let req = '?api_key=3a883f1e-54e0-4c9e-b5e0-1c56096214de'
+        const apiUrl1 = 'https://shopify-backend-12121.herokuapp.com/api/inventory/' + inventoryId + req;
+        const apiUrl2 = 'https://shopify-backend-12121.herokuapp.com/api/sales/' + inventoryId + req;
         fetch(apiUrl1)
           .then(res => res.json())
           .then(

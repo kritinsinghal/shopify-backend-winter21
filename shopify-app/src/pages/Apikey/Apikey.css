@@ -1,0 +1,12 @@
+.Apikey {
+    padding: 4rem;
+    text-align: center;
+}
+
+.Apikey-header {
+    font-size: x-large;
+    font-family: 'Nunito Light';
+    font-weight: bolder;
+    align-content: center;
+    color: #3483eb;
+}

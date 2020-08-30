@@ -12,7 +12,8 @@ function Home() {
     const [items, setItems] = useState([]);
 
     useEffect(() => { 
-        const apiUrl = 'https://shopify-backend-12121.herokuapp.com/api/inventory';
+        let req = '?api_key=3a883f1e-54e0-4c9e-b5e0-1c56096214de'
+        const apiUrl = 'https://shopify-backend-12121.herokuapp.com/api/inventory' + req;
         fetch(apiUrl)
           .then(res => res.json())
           .then(
