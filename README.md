@@ -51,7 +51,7 @@ I have used Flask for creating the store and managing the RESTful API Services. 
 The APIs are hosted at https://shopify-backend-12121.herokuapp.com \
 If using the local environment, please use the following URL: http://127.0.0.1:5000 \
 Before using the APIs, please request your free API Key here: https://shopify-winter-21.herokuapp.com/apikey \
-You can also use the default API Key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de \
+You can also use the default API Key: 3a883f1e-54e0-4c9e-b5e0-1c56096214de 
 
 
 ## Authentication
