@@ -43,7 +43,7 @@ I have used Flask for creating the store and managing the RESTful API Services. 
 
 # API
 -----
-The APIs are hosted at https://shopify-backend-12121.herokuapp.com
+The APIs are hosted at https://shopify-backend-12121.herokuapp.com \
 If using the local environment, please use the following URL: http://127.0.0.1:5000
 
 ## Inventory
