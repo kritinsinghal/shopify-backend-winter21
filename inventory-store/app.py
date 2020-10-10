@@ -5,10 +5,10 @@ from flask_cors import CORS
 from models.sales import Sales
 from models.inventory import Inventory
 from models.auth import Auth, verify_api
+from models.search import Search
 
 app = Flask(__name__)
 CORS(app)
-
 
 @app.route("/api/key", methods=['GET'])
 def api_auth_get():
@@ -62,6 +62,12 @@ def api_inventory_update(*args, **kwargs):
 def api_inventory_delete(*args, **kwargs):
   inventory_id = kwargs.get('inventory_id')
   return Inventory().delete(inventory_id)
+
+@app.route("/api/search", methods=['GET'])
+@verify_api()
+def api_search_get(*args, **kwargs):
+  query = request.args.get('query')
+  return Search().query(query)
 
 if __name__ == "__main__":
   app.run(debug=True)

@@ -14,6 +14,7 @@ class Search():
             name = doc_dict['name']
             name_words = name.split(" ")
             for word in name_words:
+                word = word.lower()
                 if word not in index.keys():
                     index[word] = {}
                 index[word][doc.id] = 1
